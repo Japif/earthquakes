@@ -14,7 +14,7 @@ const hearUrl = (url) => {
 function Card(props) {
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes["info-container"]}>
         <Label icon="location_on">Location: {props.data.place}</Label>
         <Label icon="schedule">Time: {props.data.date}</Label>
         <Label icon="arrow_downward">Depth: {props.data.ipo}km</Label>
