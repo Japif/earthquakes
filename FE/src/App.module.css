@@ -1,0 +1,23 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explain {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  width: 50rem;
+  border: 1px solid #d9dfe6;
+  border-radius: 0.5rem;
+  margin-bottom: 0.6rem;
+  transition: 0.5s;
+  -webkit-box-shadow: 6px 8px 14px -3px rgb(206, 206, 206);
+  box-shadow: 6px 8px 14px -3px rgb(206, 206, 206);
+}
+
+
+
+
