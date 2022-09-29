@@ -20,7 +20,8 @@ def get_from_table(rawlist):
             "ipo": data[3].text,
             "lat": data[4].text,
             "lon": data[5].text,
-            "url": data[0].find('a')["href"]
+            "url": data[0].find('a')["href"],
+            "id": data[0].find('a')["href"].split("/")[-1]
         }
         finallist.append(obj)
     return finallist
@@ -44,8 +45,9 @@ def check_key():
         rawlist = soup.find("table").find_all("tr")
         finallist += get_from_table(rawlist)
 
-    toReturn = finallist
-    return jsonify(toReturn)
+    toReturn = jsonify(finallist)
+    toReturn.headers.add('Access-Control-Allow-Origin','*')
+    return toReturn
 
 if __name__ == "__main__":
     app.run('0.0.0.0')

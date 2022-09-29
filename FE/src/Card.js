@@ -6,8 +6,7 @@ const mapsUrl = (lat, lon) => {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
 };
 
-const hearUrl = (url) => {
-  const id = url.split("/").pop();
+const hearUrl = (id) => {
   return `https://www.hsit.it/xml-server.php?item=quest&action=compile&event_id=${id}&output=int`;
 };
 
@@ -35,7 +34,7 @@ function Card(props) {
         >
           View on Google Maps
         </Button>
-        <Button url={hearUrl(props.data.url)} style={{}}>
+        <Button url={hearUrl(props.data.id)} style={{}}>
           Did you hear it?
         </Button>
       </div>
