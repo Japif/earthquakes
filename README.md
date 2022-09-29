@@ -19,3 +19,6 @@ Although INGV offers an [API service](http://terremoti.ingv.it/webservices_and_s
 * Download and extract the repo
 * Start the main.py file in the BE directory
 * Start the react project in the FE directory
+
+### Roadmap
+I plan to fix the 7 days issue and implement a filter function (for ML and date) in the near future
